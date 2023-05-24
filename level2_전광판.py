@@ -17,6 +17,7 @@ info = {
     '8' : '1111111',
     '9' : '1111011',
     ' ' : '0000000'
+    # 맨처음에 들어오는 0들은 0000으로 처리함을 잊지말자
 }
 
 
@@ -24,11 +25,11 @@ t = int(input())
 for _ in range(t):
     a, b = map(str,input().split())
     
-    
     #전처리
     a_zero, b_zero = 5-len(a), 5-len(b)
     a = ' ' * a_zero + a
     b = ' ' * b_zero + b
+    #a의 앞에 0이 몇개인지, b의 앞에 0이 몇개인지!!
 
     result = 0
 
